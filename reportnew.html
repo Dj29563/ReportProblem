@@ -4,57 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simple Form</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #feb603;
-  }
-  .container {
-    margin-top: 50px;
-  }
-  .form-container {
-    width: 300px;
-    margin: 0 auto;
-    background-color: #472407;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  h2 {
-    color: white;
-  }
-  label {
-    display: block; 
-    margin-bottom: 5px; 
-    color: white;
-  }
-  textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #fe5001;
-    border-radius: 10px;
-    box-sizing: border-box;
-    overflow-wrap: break-word; 
-    height: 30px; 
-    resize: none; 
-    overflow-y: hidden; 
-  }
-
-  input[type="submit"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 10px;
-    background-color: #fe5001;
-    color: #ffffff;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -70,13 +20,7 @@
   </div>
 </div>
 
-<script>
-element.style.height = '30px';
-function autoExpand(element) {
-  
-  element.style.height = element.scrollHeight + 'px';
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
