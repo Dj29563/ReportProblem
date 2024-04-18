@@ -1,54 +1,104 @@
+.tab-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    position: relative;
+    width: calc(33.33% - 0px);
+    padding: 15px;
+    background-color: #cd6b02;
+    border: 2px solid #cd6b02;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    z-index: 0;
+}
+
+.tab.active {
+    background-color: #472407;
+    border-color: #472407;
+}
+
+.tab.middle-tab {
+    cursor: default;
+}
+
+.form-container {
+    margin-top: 0px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #feb603;
 }
 
-.container {
-    margin-top: 50px;
-}
-
 .form-container {
-    width: 300px;
-    margin: 0 auto;
     background-color: #472407;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 h2 {
     color: white;
 }
 
-label {
-    display: block; 
-    margin-bottom: 5px; 
-    color: white;
-}
-
 textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
+    width: calc(100% - 5%);
+    padding: 5%;
+    margin: 10px;
     border: 1px solid #fe5001;
     border-radius: 10px;
     box-sizing: border-box;
-    overflow-wrap: break-word; 
-    height: 30px; 
-    resize: none; 
-    overflow-y: hidden; 
+    overflow-wrap: break-word;
+    height: 80px;
+    resize: none;
+    overflow-y: hidden;
 }
 
 input[type="submit"] {
-    width: calc(100% - 20px);
+    width: calc(100% - 5%);
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
     border: none;
     border-radius: 10px;
     background-color: #fe5001;
     color: #ffffff;
     cursor: pointer;
     box-sizing: border-box;
+    margin-bottom: -10px;
+}
+
+img {
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    z-index: 2;
+}
+
+#question3 h6 {
+    margin: 0;
+    padding: 20px;
+    font-size: 180%;
+    color: #fe5001;
+    line-height: 0.2;
+}
+
+#question3 p {
+    margin: 0;
+    padding: 20px;
+    font-size: 95%;
+    color: #feb603;
+    line-height: 1.2;
 }
