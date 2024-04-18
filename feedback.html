@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Form</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="tab-container">
+        <div class="tab" id="tab1" onclick="showQuestion(1)">แจ้งปัญหา</div>
 
-<div class="container">
-  <div class="form-container">
-    <h2>แจ้งปัญหาการใช้งาน</h2>
-    <h2>Chatbot Theta</h2>
-    <form action="submit.php" method="post">
-      <label for="problem">ปัญหาที่พบ:</label>
-      <textarea id="problem" name="problem" oninput="autoExpand(this)"></textarea><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</div>
+        <div class="tab" id="tab2" onclick="showQuestion(2)">ข้อเสนอแนะ</div>
+    </div>
 
-<script src="script.js"></script>
+    <div class="form-container">
+        <div class="form-group" id="question1" style="display: none;">
+            <div class="embedded-container">
+                <div class="embedded-form-container">
+                    <form action="submit_first.php" method="post">
+                        <textarea id="problem" name="problem" placeholder="ปัญหาที่พบ"></textarea><br>
+                        <input type="submit" value="ส่งเรื่อง">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="question2" style="display: none;">
+            <div class="embedded-container">
+                <div class="embedded-form-container">
+                    <form action="submit_second.php" method="post">
+                        <textarea id="problem" name="problem" placeholder="ข้อแนะนำเพิ่มเติม"></textarea><br>
+                        <input type="submit" value="ส่งเรื่อง">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="question3">
+            <h6>ขอบคุณนักผจญภัย</h6>
+            <h6>ที่ช่วยเหลือพี่ทีต้า</h6>
+            <p>น้องๆ สามารถเลือกโหมดแจ้งปัญหาเพื่อแจ้งปัญหาติดขัดของระบบ หรือ โหมดข้อเสนอแนะเพื่อช่วยแสดงความคิดเห็นในการเตรียมตัวของพี่ต้าให้ดีขึ้นได้เลยนะ!</p>
+        </div>
+    </div>
+    <img src="https://cdn.discordapp.com/attachments/932168502297628673/1225381556194115664/logofin2.png?ex=66336181&is=6620ec81&hm=623b757a59465608944feb500f1df4af0ac2571283da75158432236c4f26294a&" alt="Theta">
 
+    <script src="script.js"></script>
 </body>
+
 </html>
